@@ -1,7 +1,7 @@
 const prompt = require('prompt-sync')();
 const { evaluate } = require('mathjs');
 
-let calc = {
+export const calc = {
     evalItems: ['0', '', '0'],
     evalIdx: 0,
     numbers: "0123456789.",

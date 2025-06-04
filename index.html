@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/mathjs@11.11.1/lib/browser/math.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="output.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <title>Odin Calc</title>
+</head>
+
+<body>
+    <div class="flex justify-center mt-40">
+        <div class="flex flex-col w-100 items-center">
+
+            <!-- Display Lines -->
+            <div class="flex flex-col pr-10 self-end">
+                <div id="expressionText" class="flex h-10 text-right text-2xl self-end ">
+                    234 + 321
+                </div>
+                <div id="displayText" class="flex h-15 text-right text-4xl self-end ">
+                    23.123
+                </div>
+            </div>
+
+            <!-- Button Grid -->
+            <div id="buttonGrid" class="flex flex-col">
+                <div class="flex">
+                    <button id="7" class="calcButton">7</button>
+                    <button id="8" class="calcButton">8</button>
+                    <button id="9" class="calcButton">9</button>
+                    <button id="+" class="calcButton">+</button>
+                </div>
+                <div class="flex">
+                    <button id="4" class="calcButton">4</button>
+                    <button id="5" class="calcButton">5</button>
+                    <button id="6" class="calcButton">6</button>
+                    <button id="-" class="calcButton">-</button>
+                </div>
+                <div class="flex">
+                    <button id="1" class="calcButton">1</button>
+                    <button id="2" class="calcButton">2</button>
+                    <button id="3" class="calcButton">3</button>
+                    <button id="/" class="calcButton">/</button>
+                </div>
+                <div class="flex">
+                    <div id="empty" class="empty"></div>
+                    <button id="0" class="calcButton">0</button>
+                    <button id="." class="calcButton">.</button>
+                    <button id="*" class="calcButton">*</button>
+                </div>
+                <div class="flex">
+                    <button id="c" class="calcButtonLg">AC</button>
+                    <button id="=" class="calcButtonLg">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
