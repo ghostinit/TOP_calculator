@@ -4,11 +4,8 @@
     /* ... */
 }
 
-
 .calcButtonLg,
 .calcButton {
-    /* @apply px-4 py-2 border rounded-full */
-    /* @apply rounded-full border border-gray-300 px-2 py-1 w-14 h-8 shadow-md active:translate-y-0.5 active:shadow-sm transition-all; */
     @apply text-white font-semibold py-2 px-4 rounded-full shadow-inner border-t border-gray-600 border-b-4 border-b-gray-950 transition-all active:translate-y-0.5 active:shadow-none;
 }
 
@@ -49,10 +46,6 @@
     @apply bg-gradient-to-b from-gray-200 to-gray-500;
 }
 
-/* .retro {
-    @apply font-family: 'VT323', monospace;
-} */
-
 .display-text {
     @apply flex h-15 text-right text-4xl self-end;
 }
@@ -64,7 +57,3 @@
 .page-background {
     @apply min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-950 via-gray-900 to-gray-800;
 }
-
-/* .calc-body {
-    @apply w-full max-w-md mx-auto mt-10 p-6 bg-gradient-to-br from-gray-800 via-gray-900 to-black rounded-2xl border-4 border-gray-700 shadow-[0_0_40px_rgba(0, 255, 150, 0.25)];
-} */

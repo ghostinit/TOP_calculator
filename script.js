@@ -4,23 +4,29 @@ const buttonGrid = document.querySelector("#buttonGrid");
 
 buttonGrid.addEventListener("click", (event) => {
     const keyId = event.target.id;
-    calc.build(keyId);
-    expressionText.textContent = calc.expression;
-    displayText.textContent = calc.display;
+    if (calc.isValid(keyId)) {
+        calc.build(keyId);
+        expressionText.textContent = calc.expression;
+        displayText.textContent = calc.display;
+    }
 })
 
 document.body.onkeydown = function (e) {
-    let key = e.key;
-    if (key === "Escape") {
+    let key = e.key.toLowerCase();
+
+    if (key === "escape") {
         key = "c";
-    } else if (key === "Enter") {
+    } else if (key === "enter") {
         key = "=";
-    } else if (key === "Backspace") {
+    } else if (key === "backspace") {
         key = "b";
     }
-    calc.build(key);
-    expressionText.textContent = calc.expression;
-    displayText.textContent = calc.display;
+
+    if (calc.isValid(key)) {
+        calc.build(key);
+        expressionText.textContent = calc.expression;
+        displayText.textContent = calc.display;
+    }
 };
 
 // Calc object
@@ -32,8 +38,19 @@ const calc = {
     evalIdx: 0,                 // The index of the evalItems we're currently working with
     numbers: "0123456789.b",     // Pattern matching for numberical input
     operators: "+-*/",          // Pattern matching for operator input
+    otherValid: "=c",           // Other valid keys
     expression: '',             // Text to display in the 'expression' area
     display: '0',               // Text to display in the 'result' area
+
+    // Simple input validation
+    isValid: function (char) {
+        if (this.numbers.includes(char) || this.operators.includes(char) || this.otherValid.includes(char)) {
+            return true;
+        } else {
+            return false;
+        }
+    },
+
     // build function
     // Input from the UI is passed into this function to be processed
     // The output to the UI comes from 'expression' and 'display'
