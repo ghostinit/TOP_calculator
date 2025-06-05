@@ -4,7 +4,6 @@ const buttonGrid = document.querySelector("#buttonGrid");
 
 buttonGrid.addEventListener("click", (event) => {
     const keyId = event.target.id;
-    console.log(keyId);
     calc.build(keyId);
     expressionText.textContent = calc.expression;
     displayText.textContent = calc.display;
@@ -12,7 +11,6 @@ buttonGrid.addEventListener("click", (event) => {
 
 document.body.onkeydown = function (e) {
     let key = e.key;
-    console.log(key);
     if (key === "Escape") {
         key = "c";
     } else if (key === "Enter") {
