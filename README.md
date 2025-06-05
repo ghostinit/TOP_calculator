@@ -27,7 +27,7 @@ Save the following files in a directory:
 - favicon.png
 - images/backspace.png
 
-Open index.html in any modern web browser to start creating art!
+Open index.html in any modern web browser to start solving some maths!
 
 ## Technologies Used
 - HTML: For structuring the user interface.
