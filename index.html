@@ -8,52 +8,75 @@
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="output.css">
     <link rel="icon" href="favicon.png" type="image/png">
-    <title>Odin Calc</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <style>
+        .font-calc {
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: bold;
+        }
+
+        .title-font {
+            font-family: "Audiowide", sans-serif;
+            font-weight: 400;
+            font-size: 2.5rem;
+            font-style: normal;
+        }
+    </style>
+    <title>Calc-A-Tron</title>
 </head>
 
 <body>
-    <div class="flex justify-center mt-40">
-        <div class="flex flex-col w-100 items-center">
+    <div class="page-background">
+        <div
+            class="w-full max-w-md mx-auto mt-10 p-6 bg-gradient-to-br from-gray-800 via-gray-900 to-black rounded-2xl border-4 border-gray-700 shadow-[0_0_40px_rgba(0,255,150,0.25)]">
+            <h3
+                class="text-center title-font mb-2 font-bold text-gray-200 tracking-widest drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
+                CALC-A-TRON</h3>
 
             <!-- Display Lines -->
-            <div class="flex flex-col pr-10 self-end">
-                <div id="expressionText" class="flex h-10 text-right text-2xl self-end ">
+            <!-- class="w-full bg-[#e6f4cc] px-4 py-2 border border-gray-400 rounded-md shadow-[inset_0_2px_6px_rgba(0,0,0,0.3)] ring-1 ring-black/20"> -->
+            <div
+                class="w-full bg-[#e6f4cc] px-4 py-2 border border-gray-400 rounded-md shadow-[inset_0_2px_6px_rgba(0,0,0,0.3)] ring-1 ring-black/20">
+                <div id="expressionText" class="text-right text-2xl font-calc min-h-[2.5rem]">
                     234 + 321
                 </div>
-                <div id="displayText" class="flex h-15 text-right text-4xl self-end ">
+                <div id="displayText" class="text-right text-4xl font-calc retro">
                     23.123
                 </div>
             </div>
 
             <!-- Button Grid -->
-            <div id="buttonGrid" class="flex flex-col">
+            <div id="buttonGrid" class="flex flex-col mt-5 items-center">
                 <div class="flex">
-                    <button id="7" class="calcButton">7</button>
-                    <button id="8" class="calcButton">8</button>
-                    <button id="9" class="calcButton">9</button>
-                    <button id="+" class="calcButton">+</button>
+                    <button id="7" class="calcButton drk-gray">7</button>
+                    <button id="8" class="calcButton drk-gray">8</button>
+                    <button id="9" class="calcButton drk-gray">9</button>
+                    <button id="+" class="calcButton orange">+</button>
                 </div>
                 <div class="flex">
-                    <button id="4" class="calcButton">4</button>
-                    <button id="5" class="calcButton">5</button>
-                    <button id="6" class="calcButton">6</button>
-                    <button id="-" class="calcButton">-</button>
+                    <button id="4" class="calcButton drk-gray">4</button>
+                    <button id="5" class="calcButton drk-gray">5</button>
+                    <button id="6" class="calcButton drk-gray">6</button>
+                    <button id="-" class="calcButton orange">-</button>
                 </div>
                 <div class="flex">
-                    <button id="1" class="calcButton">1</button>
-                    <button id="2" class="calcButton">2</button>
-                    <button id="3" class="calcButton">3</button>
-                    <button id="/" class="calcButton">/</button>
+                    <button id="1" class="calcButton drk-gray">1</button>
+                    <button id="2" class="calcButton drk-gray">2</button>
+                    <button id="3" class="calcButton drk-gray">3</button>
+                    <button id="/" class="calcButton orange">/</button>
                 </div>
                 <div class="flex">
-                    <div id="empty" class="empty"></div>
-                    <button id="0" class="calcButton">0</button>
-                    <button id="." class="calcButton">.</button>
-                    <button id="*" class="calcButton">*</button>
+                    <button id="b" class="backButton lt-gray flex items-center justify-center">
+                        <img id="b" src="images/backspace.png" alt="backspace button" class="w-auto h-10" />
+                    </button>
+                    <button id="0" class="calcButton drk-gray">0</button>
+                    <button id="." class="calcButton lt-gray">.</button>
+                    <button id="*" class="calcButton orange">*</button>
                 </div>
                 <div class="flex">
-                    <button id="c" class="calcButtonLg">AC</button>
-                    <button id="=" class="calcButtonLg">=</button>
+                    <button id="c" class="calcButtonLg lt-gray">AC</button>
+                    <button id="=" class="calcButtonLg lt-gray">=</button>
                 </div>
             </div>
         </div>
